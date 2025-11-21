@@ -10,11 +10,16 @@ const server = new McpServer({
     version: '0.0.1',
 });
 
-server.tool(
+server.registerTool(
     "get_alerts",
-    "Get weather alerts for a state",
     {
-        state: z.string().length(2).describe("Two-letter state code (e.g. CA, NY)")
+        description: "Get weather alerts for a state",
+        inputSchema: {
+            state: z.string().length(2).describe("Two-letter state code (e.g. CA, NY)")
+        },
+        outputSchema: {
+            
+        }
     },
     async ({ state }) => {
         const stateCode = state.toUpperCase();
@@ -56,12 +61,14 @@ server.tool(
     }
 );
 
-server.tool(
+server.registerTool(
     "get_forecast",
-    "Get weather forecast for a location",
     {
-        latitude: z.number().min(-90).max(90).describe("Latitude of the location"),
-        longitude: z.number().min(-180).max(180).describe("Longitude of the location")
+        description: "Get weather forecast for a location",
+        inputSchema: {
+            latitude: z.number().min(-90).max(90).describe("Latitude of the location"),
+            longitude: z.number().min(-180).max(180).describe("Longitude of the location")
+        }
     },
     async ({ latitude, longitude }) => {
         const pointsUrl = `${NWS_API_BASE}/points/${latitude.toFixed(4)},${longitude.toFixed(4)}`;
