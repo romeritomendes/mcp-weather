@@ -220,5 +220,5 @@ O Cline automaticamente detectará que precisa usar este servidor MCP.
 
 ### Build
 - TypeScript → JavaScript
-- Executável CLR no `build/`
+- Executável JavaScript no `build/`
 - Binário CLI via `package.json`
