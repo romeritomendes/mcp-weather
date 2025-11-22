@@ -88,17 +88,17 @@ Este é um servidor MCP que permite acesso a dados meteorológicos dos EUA atrav
 ───────────────────────────────┘
          Final Response
                               ┌─────────────────────────────────────┐
-                              │ 8. Cline → LLM:                    │
+                              │ 8. Cline → LLM:                     │
                               │    "Recebi resposta técnica. Preciso│
-                              │     apresenta-la? Avalie clareza,  │
-                              │     idioma, unidades apropriadas?" │
+                              │     apresenta-la? Avalie clareza,   │
+                              │     idioma, unidades apropriadas?"  │
                               └─────────────────────────────────────┘
                                       │
                                       ↓
                               ┌─────────────────────────────────────┐
-                              │ 9. LLM processa se necessário:     │
+                              │ 9. LLM processa se necessário:      │
                               │    "Converte °F→°C, inglês→português│
-                              │     formata de forma natural"      │
+                              │     formata de forma natural"       │
                               └─────────────────────────────────────┘
                                       │
                                       ↓ Apresenta resultado
