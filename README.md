@@ -179,7 +179,7 @@ Para usar este servidor MCP no Cline, adicione a seguinte configuração no seu 
 }
 ```
 
-⭐ **`Ajuste o caminho`** para o local real onde o projeto foi clonado.
+**`* Ajuste o caminho`** para o local real onde o projeto foi clonado.
 
 ### 5. Usar no Cline
 
